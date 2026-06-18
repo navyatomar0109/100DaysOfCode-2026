@@ -55,7 +55,7 @@ int main()
     int digitsSize = sizeof(digits) / sizeof(digits[0]);
     int returnSize = 0;
 
-    
+
     int *result = plusOne(digits, digitsSize, &returnSize);
     if (result == NULL)
     {
@@ -75,4 +75,4 @@ int main()
 
     free(result);
     return 0;
-}
+} 
