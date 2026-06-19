@@ -23,3 +23,4 @@ int main() {
     printf("%s", checkEqualArrays(a, b, 4) ? "true" : "false");
     return 0;
 }
+//
