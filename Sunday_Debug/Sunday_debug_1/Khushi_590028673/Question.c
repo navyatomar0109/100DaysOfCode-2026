@@ -1,3 +1,7 @@
+
+// Q- Find Bugs
+
+
 void addGoalToStadium2(int minute, int playerID) {
     if (goalCount[2] >= MAX_GOALS) {
         printf("Stadium 2 is full\n");
