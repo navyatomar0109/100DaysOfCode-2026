@@ -1,14 +1,15 @@
-import java.util.*;
+import java.util.HashSet;
 
 public class Question2 {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String username = sc.next();
+
+        String username = "alex";
 
         HashSet<Character> set = new HashSet<>();
 
-        for (char ch : username.toCharArray()) {
-            set.add(ch); 
+        for (int i = 0; i < username.length(); i++) {
+            set.add(username.charAt(i));
         }
 
         if (set.size() % 2 == 0) {
