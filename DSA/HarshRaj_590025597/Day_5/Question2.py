@@ -1,53 +1,33 @@
-def find_first(arr, val):
-    lo, hi = 0, len(arr) - 1
-    pos = -1
+# Check Equal Arrays
 
-    while lo <= hi:
-        mid = (lo + hi) // 2
+# Take input for array a
+a = list(map(int, input("Enter elements of array a (space-separated): ").split()))
 
-        if arr[mid] == val:
-            pos = mid
-            hi = mid - 1  
-        elif arr[mid] < val:
-            lo = mid + 1
-        else:
-            hi = mid - 1
+# Take input for array b
+b = list(map(int, input("Enter elements of array b (space-separated): ").split()))
 
-    return pos
+# Check if sizes are different
+if len(a) != len(b):
+    print("false")
+else:
+    freq = {}
 
+    # Count frequency from array a
+    for x in a:
+        freq[x] = freq.get(x, 0) + 1
 
-def find_last(arr, val):
-    lo, hi = 0, len(arr) - 1
-    pos = -1
+    # Decrease frequency using array b
+    for x in b:
+        freq[x] = freq.get(x, 0) - 1
 
-    while lo <= hi:
-        mid = (lo + hi) // 2
+    # Check if all frequencies are zero
+    equal = True
+    for value in freq.values():
+        if value != 0:
+            equal = False
+            break
 
-        if arr[mid] == val:
-            pos = mid
-            lo = mid + 1   
-        elif arr[mid] < val:
-            lo = mid + 1
-        else:
-            hi = mid - 1
-
-    return pos
-
-
-def how_many_times(arr, val):
-    start = find_first(arr, val)
-
-
-    if start == -1:
-        return 0
-
-    end = find_last(arr, val)
-    return end - start + 1
-
-
-
-nums = list(map(int, input("Sorted array (space-separated): ").split()))
-val  = int(input("Target: "))
-
-count = how_many_times(nums, val)
-print(f"{val} appears {count} time(s)")
+    if equal:
+        print("true")
+    else:
+        print("false")
