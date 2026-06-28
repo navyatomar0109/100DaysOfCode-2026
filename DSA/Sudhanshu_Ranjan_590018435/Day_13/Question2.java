@@ -7,7 +7,6 @@ class Solution {
             int count2 = countDistinctSubsequences(str2);
     
             return (count1 >= count2) ? str1 : str2;
-        }
     
         private static int countDistinctSubsequences(String str) {
             int MOD = 1000000007;
