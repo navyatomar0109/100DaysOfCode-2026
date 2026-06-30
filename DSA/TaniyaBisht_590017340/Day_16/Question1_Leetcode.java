@@ -1,4 +1,3 @@
-
 class Solution {
     public ListNode swapPairs(ListNode head) {
         ListNode dummy = new ListNode();
