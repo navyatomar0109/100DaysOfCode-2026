@@ -3,7 +3,7 @@
 int main(){
     char s[100];
     fgets(s,100,stdin);
-    s[strcspn(s,"\n")] = "\0";
+    s[strcspn(s,"\n")] = '\0';
     int num=0;
     for(int i=0;s[i] != '\0';i++){
         if(s[i] != ' '){
