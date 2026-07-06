@@ -1,20 +1,17 @@
-int lengthOfLastWord(char *s) {
+#include <string.h>
 
-    int i = 0;
-
-    // Find the length of the string
-    while (s[i] != '\0')
-        i++;
-
-    i--; // Move to the last character
-
-    // Skip trailing spaces
-    while (i >= 0 && s[i] == ' ')
-        i--;
-
+int lengthOfLastWord(char* s) {
+    int len = strlen(s);
     int count = 0;
 
-    // Count characters of the last word
+    int i = len - 1;
+
+    // Skip trailing spaces
+    while (i >= 0 && s[i] == ' ') {
+        i--;
+    }
+
+    // Count characters of last word
     while (i >= 0 && s[i] != ' ') {
         count++;
         i--;
