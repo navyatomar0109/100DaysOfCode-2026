@@ -23,30 +23,19 @@ public:
 
         return prev;
     }
-
     bool isPalindrome(ListNode* head) {
-
-        // Empty list or single node
         if (head == nullptr || head->next == nullptr)
             return true;
-
-        // Step 1: Find the middle
         ListNode* slow = head;
         ListNode* fast = head;
-
         while (fast != nullptr && fast->next != nullptr) {
             slow = slow->next;
             fast = fast->next->next;
         }
-
-        // Step 2: Reverse second half
         ListNode* secondHalf = reverse(slow);
         ListNode* secondHalfCopy = secondHalf;
-
-        // Step 3: Compare both halves
         ListNode* firstHalf = head;
         bool palindrome = true;
-
         while (secondHalf != nullptr) {
             if (firstHalf->val != secondHalf->val) {
                 palindrome = false;
@@ -56,10 +45,7 @@ public:
             firstHalf = firstHalf->next;
             secondHalf = secondHalf->next;
         }
-
-        // Step 4: Restore original list
         reverse(secondHalfCopy);
-
         return palindrome;
     }
 };
