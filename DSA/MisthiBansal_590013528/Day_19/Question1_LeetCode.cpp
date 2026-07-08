@@ -1,3 +1,5 @@
+//Leetcode 83
+//Remove duplicates from sorted list
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -10,21 +12,17 @@
  */
 class Solution {
 public:
-    ListNode* removeElements(ListNode* head, int val) {
-        ListNode dummy(0);
-        dummy.next=head;
-        ListNode* prev= &dummy;
+    ListNode* deleteDuplicates(ListNode* head) {
+        if (head == nullptr)
+    return head;
         ListNode* curr = head;
-        while(curr!= nullptr){
-            if(curr->val == val){
-                prev->next = curr->next;
-                curr = curr->next;
+        while(curr->next != nullptr){
+            if(curr->val == curr->next->val){ //duplicate found
+                curr->next = curr->next->next;
             }
             else{
-                prev = curr;
                 curr = curr->next;
-            }
         }
-        return dummy.next;
     }
+    return head;}
 };
