@@ -1,4 +1,4 @@
-<h2 align="center">Week 4 Day 25 (07/09/2026)</h2>
+<h2 align="center">Week 4 Day 25 (09/07/2026)</h2>
 
 ## 1. Valid Triangle Number (LeetCode #611)
 A problem that teaches sorting and two pointer techniques by counting the number of valid triangles that can be formed from an array. Given an integer array nums, return the number of triplets that can form a valid triangle. A triangle is valid if the sum of any two sides is greater than the third side.
