@@ -1,8 +1,8 @@
-package Day_28;
+package Day_29;
 
 import java.util.*;
 
-public class d28question2_technical {
+public class d29question2_technical {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String n = sc.nextLine();          // size of the input array

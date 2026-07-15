@@ -1,7 +1,7 @@
-package Day_28;
+package Day_29;
 
 import java.util.*;
-public class d28question1_leetcode {
+public class d29question1_leetcode {
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         
